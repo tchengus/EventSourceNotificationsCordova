@@ -1,0 +1,58 @@
+<!--
+Copyright 2015 IBM Corp.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+   	<head>
+   		<meta charset="UTF-8">
+   		<title>Push Notifications</title>
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+   		<!--
+    		<link rel="shortcut icon" href="images/favicon.png">
+    		<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    	-->
+        <link rel="stylesheet" href="worklight/worklight.css">
+   		<link rel="stylesheet" href="css/index.css">
+        <script src="lib/jquery.min.js"></script>
+        <script src="js/PushAppRealmChallengeHandler.js"></script>
+   		<script src="js/index.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+
+   	</head>
+   	<body style="display: none;">
+   		<div id="header">
+			<h1>Event Source Notifications</h1>
+		</div>
+   		
+   		<div id="AppBody">	
+			<div class="wrapper">
+				<input type="button" id="isPushSupportedButton" class="appButtons" value="isPushSupported" onclick="isPushSupported();"/>
+				<input type="button" id="isSubscribedButton" class="appButtons" value="isSubscribed" onclick="isPushSubscribed();"/>
+				<br />
+				<input type="button" id="SubscribeButton" class="appButtons" value="Subscribe" onclick="doSubscribe();" disabled="disabled"/>
+				<input type="button" id="UnsubscribeButton" class="appButtons" value="Unsubscribe" onclick="doUnsubscribe();" disabled="disabled"/><br />				
+			</div> 	
+		</div>
+
+		<div id="AuthBody" style="display: none">
+			<div class="wrapper">
+				<form id="loginForm" >
+					<input type="text" id="usernameInputField" placeholder="Username"/><br />
+					<input type="password" id="passwordInputField" placeholder="Password"/><br/>		
+					<input type="button" id="loginButton" value="Login" onclick="loginButtonClicked()" />
+				</form>
+			</div>
+		</div>   
+   	</body>
+</html>
